@@ -54,7 +54,7 @@ object Form1: TForm1
     Top = 264
     Width = 131
     Height = 25
-    Caption = 'Move Last Thing Right'
+    Caption = 'Move Last Thing Randomly'
     TabOrder = 1
     OnClick = Button2Click
   end

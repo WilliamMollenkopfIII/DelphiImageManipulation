@@ -10,31 +10,31 @@ type
        private
         XPos : Integer;
         YPos : Integer;
-        thisLabel : TLabel;
+        thisImage : TImage;
        published
 
        constructor Create(X,Y : Integer);
-        procedure SetLabel(var theLabel: TLabel);
+        procedure SetImageRef(var theImage: TImage);
          procedure MoveTo(X,Y : Integer);
    End;
 implementation
 
 constructor TDuctComponent.Create(X,Y : Integer);
  begin
-
+   thisImage.Picture.LoadFromFile('Images\dummyImage1.png');
 
  end;
 
- procedure TDuctComponent.SetLabel(var theLabel: TLabel);
+ procedure TDuctComponent.SetImageRef(var theImage: TImage);
  begin
-   thisLabel := theLabel;
+   thisImage := theImage;
  end;
 
  procedure TDuctComponent.MoveTo(X,Y : Integer);
 
  begin
-   thisLabel.Top := Y;
-   thisLabel.Left := X;
+   thisImage.Top := Y;
+   thisImage.Left := X;
  end;
 
 
